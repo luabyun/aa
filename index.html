@@ -19,15 +19,9 @@ color:white;
 overflow-x:hidden;
 }
 
-section{
+/* LAYOUT BASE */
 section{
 min-height:100vh;
-}
-
-@media (max-width:768px){
-section{
-min-height:auto;
-}
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -36,6 +30,7 @@ padding:40px;
 text-align:center;
 }
 
+/* TIPOGRAFIA */
 h1{
 font-size:clamp(2rem,5vw,4rem);
 font-family:'Great Vibes',cursive;
@@ -53,6 +48,7 @@ line-height:1.7;
 font-size:1.1rem;
 }
 
+/* CARD */
 .card{
 background:rgba(10,15,44,0.75);
 backdrop-filter:blur(10px);
@@ -64,6 +60,7 @@ max-width:800px;
 border:1px solid rgba(255,255,255,0.1);
 }
 
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -84,6 +81,7 @@ transition:.3s;
 transform:scale(1.05);
 }
 
+/* BOTÃO */
 .btn{
 padding:15px 30px;
 background:#276396;
@@ -101,6 +99,7 @@ transform:scale(1.08);
 box-shadow:0 0 20px #e23636;
 }
 
+/* ANIMAÇÃO */
 .heart{
 position:fixed;
 bottom:-20px;
@@ -112,39 +111,13 @@ pointer-events:none;
 }
 
 @keyframes float{
-0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0;}
+0%{transform:translateY(0) rotate(0deg);opacity:0;}
 10%{opacity:0.8;}
 50%{transform:translateY(-50vh) translateX(20px) rotate(90deg);}
 100%{transform:translateY(-120vh) translateX(-20px) rotate(180deg);opacity:0;}
 }
 
-@media (max-width:768px){
-
-section{
-padding:20px;
-}
-
-h1{
-font-size:clamp(2rem,6vw,3rem);
-}
-
-p{
-font-size:1rem;
-line-height:1.6;
-}
-
-.card{
-padding:20px;
-margin:15px 0;
-}
-
-.gallery img{
-height:220px;
-}
-
-.btn{
-width:100%;
-}
+/* MOBILE */
 @media (max-width:768px){
 
 section{
@@ -152,24 +125,24 @@ min-height:auto;
 padding:20px 15px;
 }
 
-.card{
-width:100%;
-margin:15px 0;
-padding:20px;
-}
-
 h1{
-font-size:2.2rem !important;
+font-size:2.2rem;
 line-height:1.2;
 }
 
 h2{
-font-size:1.4rem !important;
+font-size:1.4rem;
 }
 
 p{
 font-size:1rem;
 line-height:1.6;
+}
+
+.card{
+width:100%;
+margin:15px 0;
+padding:20px;
 }
 
 .gallery{
@@ -179,6 +152,11 @@ gap:15px;
 
 .gallery img{
 height:200px;
+}
+
+.btn{
+width:100%;
+}
 }
 </style>
 </head>
