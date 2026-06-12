@@ -9,14 +9,19 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{
 background:
-radial-gradient(circle at top left, rgba(79,70,229,.25), transparent 30%),
-radial-gradient(circle at top right, rgba(220,38,38,.18), transparent 30%),
-radial-gradient(circle at bottom, rgba(37,99,235,.15), transparent 40%),
-#050816;
+linear-gradient(
+rgba(0,0,20,.45),
+rgba(0,0,0,.75)
+),
+url("fundo-starwars.png");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
 
 color:white;
 overflow-x:hidden;
-position:relative;
 }
 .card{
 background:rgba(8,12,35,0.75);
