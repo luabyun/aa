@@ -120,15 +120,29 @@ opacity:0.8;
 pointer-events:none;
 }
 @keyframes float{
-0%{transform:translateY(0) rotate(0deg);opacity:1;}
-100%{transform:translateY(-110vh) rotate(360deg);opacity:0;}
+0%{
+transform:translateY(0) translateX(0) rotate(0deg);
+opacity:0;
+}
+
+10%{
+opacity:0.8;
+}
+
+50%{
+transform:translateY(-50vh) translateX(20px) rotate(90deg);
+}
+
+100%{
+transform:translateY(-120vh) translateX(-20px) rotate(180deg);
+opacity:0;
 }
 </style>
 </head>
 <body>
 
 <section>
-<h1>Para o meu herói da vizinhança ❤️</h1>
+<h1>Para o meu herói da vizinhança 💙</h1>
 <section>
 <div class="gallery">
 <img src="https://drive.google.com/file/d/1NQ-hLnZUUC5sf7kvhU2lJLhKAQc-NF-a/view?usp=sharing">
@@ -140,7 +154,7 @@ Talvez eu não consiga pilotar a Millennium Falcon e nem lançar teias pelos pr�
 Mas consegui esbarrar em você, em uma partida aleatória de Valorant, em um universo totalmente aleatório.<br><br>
 </p>
 <h2 style="margin-top:30px;">
-Mas antes de começar, dê play na nossa trilha sonora ❤️
+Mas antes de começar, dê play na nossa trilha sonora 💙
 </h2>
 
 <iframe
@@ -156,7 +170,7 @@ allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-pictur
 
 
 <button class="btn" onclick="document.querySelectorAll('section')[1].scrollIntoView({behavior:'smooth'})">
-Start ❤️
+Start 💙
 </button>
 <section>
 
@@ -176,7 +190,7 @@ Entre todas as linhas do tempo possíveis, a minha favorita continua sendo aquel
 
 <section>
 <div class="card">
-<h2>10 coisas que eu amo em você ❤️</h2>
+<h2>10 coisas que eu amo em você 💙</h2>
 <p>
 1. Sua voz.<br>
 2. Seu jeito de cuidar de mim.<br>
@@ -216,7 +230,7 @@ e se tornou uma das melhores partes da minha vida.<br><br>
 Obrigada por estar aqui.<br><br>
 Obrigada por ser você.<br><br>
 Com amor,<br><br>
-Lua ❤️
+Lua 💙
 </p>
 </div>
 </section>
@@ -232,13 +246,13 @@ Muitos sonhos para realizar.<br><br>
 E eu quero viver tudo isso ao seu lado.<br><br>
 Porque, se existe uma coisa que aprendi nesses anos, é que qualquer aventura fica melhor quando você está nela.
 </p>
-<h1>❤️</h1>
+<h1>💙</h1>
 <p>
 Em alguma galáxia muito, muito distante...<br><br>
 ou em alguma realidade paralela do multiverso...<br><br>
 eu espero que nós continuemos nos encontrando.<br><br>
 Porque você continua sendo a minha escolha favorita.<br><br>
-❤️<br><br>
+💙<br><br>
 Feliz Dia dos Namorados, gatinho.
 </p>
 </div>
@@ -257,7 +271,7 @@ if(dias < 0){ meses--; dias += 30; }
 if(meses < 0){ anos--; meses += 12; }
 
 document.getElementById("contador").innerHTML =
-`Estamos juntos há ❤️<br><br>${anos} anos<br>${meses} meses<br>${dias} dias`;
+`Estamos juntos há 💙<br><br>${anos} anos<br>${meses} meses<br>${dias} dias`;
 }
 
 atualizarContador();
@@ -265,15 +279,18 @@ atualizarContador();
 function criarCoracao(){
 const heart = document.createElement("div");
 heart.classList.add("heart");
-heart.innerHTML="❤️";
+heart.innerHTML="💙";
 heart.style.left=Math.random()*100+"vw";
 heart.style.fontSize=(Math.random()*25+15)+"px";
-heart.style.animationDuration=(Math.random()*5+5)+"s";
+heart.style.animationDuration=(Math.random()*10+15)+"s";
 document.body.appendChild(heart);
-setTimeout(()=>{heart.remove();},10000);
+
+setTimeout(()=>{
+heart.remove();
+},25000);
 }
 
-setInterval(criarCoracao,300);
+setInterval(criarCoracao,700);
 </script>
 
 </body>
