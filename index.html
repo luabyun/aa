@@ -19,14 +19,14 @@ color:white;
 overflow-x:hidden;
 }
 
-/* LAYOUT BASE (DESKTOP + MOBILE FUNCIONA AQUI) */
+/* LAYOUT BASE */
 section{
 min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:40px 20px;
+padding:40px;
 text-align:center;
 }
 
@@ -37,44 +37,41 @@ backdrop-filter:blur(10px);
 padding:30px;
 border-radius:20px;
 margin:20px;
-width:100%;
+width:90%;
 max-width:800px;
-text-align:left;
 border:1px solid rgba(255,255,255,0.1);
 }
 
 /* TIPOGRAFIA */
 h1{
-font-size:clamp(2.2rem,5vw,4rem);
+font-size:clamp(2rem,6vw,4rem);
 font-family:'Great Vibes',cursive;
 margin-bottom:20px;
 }
 
 h2{
-font-size:clamp(1.4rem,3vw,2rem);
+font-size:2rem;
 margin-bottom:20px;
-text-align:center;
 }
 
 p{
 max-width:800px;
-line-height:1.7;
+line-height:1.8;
 font-size:1.1rem;
 }
 
-/* GALERIA (DESKTOP PADRÃO) */
+/* GALERIA */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 width:100%;
-max-width:1200px;
-margin:0 auto;
+max-width:1400px;
 }
 
 .gallery img{
 width:100%;
-height:300px;
+height:350px;
 object-fit:cover;
 border-radius:20px;
 transition:.3s;
@@ -120,17 +117,12 @@ pointer-events:none;
 100%{transform:translateY(-120vh) translateX(-20px) rotate(180deg);opacity:0;}
 }
 
-/* MOBILE AJUSTES (SÓ AQUI MUDA) */
+/* MOBILE */
 @media (max-width:768px){
 
 section{
-padding:20px 15px;
 min-height:auto;
-}
-
-.card{
-margin:15px 0;
-padding:20px;
+padding:20px 15px;
 }
 
 h1{
@@ -138,9 +130,19 @@ font-size:2.2rem;
 line-height:1.2;
 }
 
+h2{
+font-size:1.4rem;
+}
+
 p{
 font-size:1rem;
 line-height:1.6;
+}
+
+.card{
+margin:15px auto;
+padding:20px;
+width:100%;
 }
 
 .gallery{
