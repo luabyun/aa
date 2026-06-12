@@ -6,52 +6,46 @@
 <title>Para o meu herói da vizinhança 💙</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{
-background:
-linear-gradient(
-135deg,
-#090909 0%,
-#0f172a 30%,
-#7f1d1d 100%
-);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
+body{
+background:linear-gradient(135deg,#090909 0%,#0f172a 30%,#7f1d1d 100%);
 color:white;
 overflow-x:hidden;
 }
-.card{
-background:rgba(5,10,25,0.55);
-backdrop-filter:blur(8px);
 
-padding:30px;
-border-radius:20px;
-margin:20px;
-width:90%;
-max-width:800px;
-
-border:1px solid rgba(255,255,255,.12);
-}
 section{
 min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-section{
 padding:40px;
-}
-
-@media (max-width:768px){
-section{
-padding:20px;
-}
-}
 text-align:center;
 }
+
 h1{
-font-size:clamp(2rem, 6vw, 4rem);font-family:'Great Vibes',cursive;margin-bottom:20px;}
-h2{font-size:2rem;margin-bottom:20px;}
-p{max-width:800px;line-height:1.8;font-size:1.1rem;}
+font-size:clamp(2rem,5vw,4rem);
+font-family:'Great Vibes',cursive;
+margin-bottom:20px;
+}
+
+h2{
+font-size:clamp(1.3rem,3vw,2rem);
+margin-bottom:20px;
+}
+
+p{
+max-width:800px;
+line-height:1.7;
+font-size:1.1rem;
+}
+
 .card{
 background:rgba(10,15,44,0.75);
 backdrop-filter:blur(10px);
@@ -62,31 +56,27 @@ width:90%;
 max-width:800px;
 border:1px solid rgba(255,255,255,0.1);
 }
-.counter{font-size:2rem;font-weight:bold;margin-top:20px;}
+
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 width:100%;
-max-width:1400px;
+max-width:1200px;
 }
 
 .gallery img{
 width:100%;
-height:350px;
+height:300px;
 object-fit:cover;
 border-radius:20px;
 transition:.3s;
 }
 
-@media (max-width:768px){
-.gallery img{
-height:220px;
-}
-
 .gallery img:hover{
 transform:scale(1.05);
 }
+
 .btn{
 padding:15px 30px;
 background:#276396;
@@ -98,7 +88,12 @@ font-size:1rem;
 margin-top:20px;
 transition:.3s;
 }
-.btn:hover{transform:scale(1.08);box-shadow:0 0 20px #e23636;}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #e23636;
+}
+
 .heart{
 position:fixed;
 bottom:-20px;
@@ -108,32 +103,22 @@ animation:float 8s linear infinite;
 opacity:0.8;
 pointer-events:none;
 }
+
 @keyframes float{
-0%{
-transform:translateY(0) translateX(0) rotate(0deg);
-opacity:0;
+0%{transform:translateY(0) translateX(0) rotate(0deg);opacity:0;}
+10%{opacity:0.8;}
+50%{transform:translateY(-50vh) translateX(20px) rotate(90deg);}
+100%{transform:translateY(-120vh) translateX(-20px) rotate(180deg);opacity:0;}
 }
 
-10%{
-opacity:0.8;
-}
-
-50%{
-transform:translateY(-50vh) translateX(20px) rotate(90deg);
-}
-
-100%{
-transform:translateY(-120vh) translateX(-20px) rotate(180deg);
-opacity:0;
-}
 @media (max-width:768px){
 
-h1{
-font-size:clamp(2rem, 6vw, 3rem);
+section{
+padding:20px;
 }
 
-h2{
-font-size:1.5rem;
+h1{
+font-size:clamp(2rem,6vw,3rem);
 }
 
 p{
@@ -141,8 +126,9 @@ font-size:1rem;
 line-height:1.6;
 }
 
-section{
+.card{
 padding:20px;
+margin:15px 0;
 }
 
 .gallery img{
@@ -151,10 +137,6 @@ height:220px;
 
 .btn{
 width:100%;
-}
-
-.card{
-padding:20px;
 }
 }
 </style>
